@@ -6,27 +6,6 @@ pool:
 
 steps:
   - script: |
-      docker --version 
-      echo "Checking Docker Version"
-    displayName: "Check Docker Version"
-
-  - script: |
-      sudo systemctl status docker
-    displayName: "Check Docker Service Status"
-
-  - script: |
-      docker build -t helloworld:latest .
-    displayName: "Docker Build Image"
-
-  - script: |
-      docker run helloworld:latest
-    displayName: "Run Docker Container"
-
-  - script: |
-      docker ps -a
-    displayName: "List Docker Containers"
-
-  - script: |
       echo "checking node js version"
       node -v
       npm -v
