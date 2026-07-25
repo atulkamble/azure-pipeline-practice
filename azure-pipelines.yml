@@ -42,7 +42,7 @@ steps:
       go version
     displayName: "Check Go Version"
   
-  - sript: |
+  - script: |
       echo "checking dotnet version"
       dotnet --version
     displayName: "Check Dotnet Version"
