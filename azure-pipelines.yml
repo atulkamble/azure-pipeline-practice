@@ -25,3 +25,19 @@ steps:
   - script: |
       docker ps -a
     displayName: "List Docker Containers"
+
+  - script: |
+      echo "checking node js version"
+      node -v
+      npm -v
+    displayName: "Check Node JS Version"
+
+  - script: |
+      echo "checking java version"
+      java --version
+    displayName: "Check Java Version"
+
+  - script: |
+      echo "checking Go version"
+      go version
+    displayName: "Check Go Version"
