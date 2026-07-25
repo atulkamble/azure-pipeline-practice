@@ -2,7 +2,7 @@ trigger:
   - main
 
 pool:
-  vmImage: "ubuntu-latest"
+  vmImage: "windows-latest"
 
 steps:
   - script: |
@@ -41,7 +41,7 @@ steps:
       echo "checking Go version"
       go version
     displayName: "Check Go Version"
-  
+
   - script: |
       echo "checking dotnet version"
       dotnet --version
