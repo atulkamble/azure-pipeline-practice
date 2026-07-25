@@ -6,11 +6,22 @@ pool:
 
 steps:
   - script: |
-      python --version 
-      echo "Checking Python Version"
-    displayName: "Check Python Version"
+      docker --version 
+      echo "Checking Docker Version"
+    displayName: "Check Docker Version"
 
   - script: |
-      echo "Running Python Program"
-      python3 helloworld.py
-    displayName: "Run helloworld.py"
+      sudo systemctl status docker
+    displayName: "Check Docker Service Status"
+
+  - script: |
+      docker build -t helloworld:latest .
+    displayName: "Docker Build Image"
+
+  - script: |
+      docker run helloworld:latest
+    displayName: "Run Docker Container"
+
+  - script: |
+      docker ps -a
+    displayName: "List Docker Containers"
