@@ -1,0 +1,16 @@
+trigger:
+  - main
+
+pool:
+  vmImage: "ubuntu-latest"
+
+steps:
+  - script: |
+      python --version 
+      echo "Checking Python Version"
+    displayName: "Check Python Version"
+
+  - script: |
+      echo "Running Python Program"
+      python3 helloworld.py
+    displayName: "Run helloworld.py"
