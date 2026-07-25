@@ -41,3 +41,8 @@ steps:
       echo "checking Go version"
       go version
     displayName: "Check Go Version"
+  
+  - sript: |
+      echo "checking dotnet version"
+      dotnet --version
+    displayName: "Check Dotnet Version"
